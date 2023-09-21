@@ -1,0 +1,15 @@
+request has query parameters -> controllers.xml ->  command controllers -> we can access the request parameters via the Request properties -> getContext
+global forwards - ??
+stateless session beans
+Access beans - kinda like entity in hibernate, its an object used to access database
+EJB 3.0 - ?
+controller command -> access beans -> JPA -> database
+JPA version 3 - no implementation its used itself
+ Command design pattern
+ Display design pattern
+2 main projects where we do customizations: 
+	WebSphereCommerceServerExtensionsData - contains all JPA 
+	WebSphereCommerceServerExtensionsLogic - contains controller and task commands
+Creating session beans - Create it in WebSphereCommerceServerExtensionsData project 
+
+

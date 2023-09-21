@@ -1,0 +1,5 @@
+PartNumber,Type,Name,Sequence,Description,SecondaryDescription,GroupName,Field1,Footnote,ValueName,Value,Image1,Image2
+Example-PN-10001, String, WashMethod, 1, Wash method, , Clothing, A, A, dryCleanOnly, Dry clean only, dry_clean_1/image.jpg, dry_clean_2/image.jpg
+Example-PN-10002, String, WashMethod, 2, Wash method, , Clothing, B, B, handWashable, Hand Washable, handwash_thumb1/image.jpg, handwash_thumb2/image.jpg
+
+

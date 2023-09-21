@@ -1,0 +1,23 @@
+Guest Add to cart vs Registered User add to cart (calls OrderItemMove command controller upon login)
+-Guest users adding to cart will have member ID on its own
+-ORDERS_ID will be created for all the items the guest user has added to cart
+	-ORDERS_ID is like the cart id and individual items are order_id without S
+-if the guest user decided to login then all the contents of the cart will be merged with the cart of the registered user
+-then a new orders_id will be generated bound to the registered user
+-then it will have status of P which is pending
+-the orders_id of the guest user will have status of X which is ready for purging in DB
+
+Order item states
+P (pending) -> M (payment) -> C (when order and payment is approved or confirmed) -> H (when the order is sent to fullfilment system) -> G (when fullfilment systems says it has received the order)
+X (means deleted or marked to be deleted by cron job)
+
+A and B status used in B2B process
+used in edit flow, approval flow, pending approval flow
+
+Item bean -??
+Product bean -??
+
+store identifier -?
+	AuroraESite vs Extended Sites Catalog Asset Store
+
+
