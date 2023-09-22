@@ -1,0 +1,101 @@
+--FFMCENTER_ID = 10501
+--STORE_ID = 1
+select * from catalog where IDENTIFIER=10001;
+select * from storeent where IDENTIFIER='STORE_IDENTIFIER'
+select * from storerel where store_id=1 and streltyp_id=-4 and relatedstore_id not in (1);--10501
+select * from storecat where storeent_id=10501 and mastercatalog='1'
+select * from store;
+SELECT * FROM CATENTRY WHERE PARTNUMBER IN ('CLA022_220301','HME037_370201');
+SELECT * FROM CATENTRY WHERE CATENTRY_ID IN (12665, 12789, 12788) AND LANGUAGE_ID = -1;
+SELECT * FROM CATENTDESC WHERE CATENTRY_ID IN (12665, 12789, 12788) AND LANGUAGE_ID = -1;
+SELECT * FROM INVENTORY WHERE CATENTRY_ID = 12665 AND STORE_ID = 1;
+SELECT * FROM JOBSTATUS;
+SELECT * FROM STORECONF;
+SELECT * FROM CMDREG; --ALL ROWS WITH STOREENT_ID = 0 MEANS OPEN TO ALL STORES
+
+SELECT * FROM CATENTRY;
+SELECT * FROM CMDREG;
+INSERT INTO CMDREG(STOREENT_ID, INTERFACENAME, DESCRIPTION, CLASSNAME, TARGET)
+VALUES (0, 'com.joey.commerce.command.MyTestControllerCmd', 'My ControllerCommand Test', 'com.joey.commerce.command.MyTestAControllerCmdImpl','Local');
+COMMIT;
+
+SELECT * FROM CMDREG WHERE INTERFACENAME = 'com.joey.commerce.command.MyTestControllerCmd';
+
+SELECT * FROM KEYS; WHERE TABLENAME = 'catentry';
+
+select max(catentry_i) from catentry;
+select * from keys where tablename = 'users';
+select min(users_id) from users;
+
+
+INSERT INTO CMDRE(STOREENT_ID, INTERFACENAME, DESCRIPTION, CLASSNAME, TARGET)
+VALUES (0, 'com.joey.commerce.command.MyTestControllerCmd', 'My ControllerCommand Test', 'com.joey.commerce.command.MyTestAControllerCmdImpl','Local');
+
+http://localhost/webapp/wcs/stores/servlet/MyTestController
+
+Day 6 - 0:24:59 Solr link
+
+http://localhost:3737/solr/MC_10001_CatalogEntry_en_US/select?q=catentry_id:10001
+
+curl --user spiuser:passw0rd --insecure -X GET https://localhost:443/wcs/resources/admin/index/dataImport/status?jobStatusId=1501
+
+curl --user spiuser:passw0rd --insecure -X POST https://localhost:443/wcs/resources/admin/index/dataImport/build?masterCatalogId=10001
+
+https://localhost:3738/search/resources/store/1/productview/byId/12751
+
+--FFMCENTER_ID = 10501
+--STORE_ID = 1
+select * from catalog where IDENTIFIER=10001;
+select * from storeent where IDENTIFIER='STORE_IDENTIFIER'
+select * from storerel where store_id=1 and streltyp_id=-4 and relatedstore_id not in (1);--10501
+select * from storecat where storeent_id=10501 and mastercatalog='1'
+select * from store;
+SELECT * FROM CATENTRY WHERE PARTNUMBER IN ('CLA022_220301','HME037_370201');
+SELECT * FROM CATENTRY WHERE CATENTRY_ID IN (12665, 12789, 12788) AND LANGUAGE_ID = -1;
+SELECT * FROM CATENTDESC WHERE CATENTRY_ID IN (12665, 12789, 12788) AND LANGUAGE_ID = -1;
+SELECT * FROM INVENTORY WHERE CATENTRY_ID = 12665 AND STORE_ID = 1;
+SELECT * FROM JOBSTATUS;
+
+install cachemonitor
+go to C:\IBM\WebSphere\Liberty\bin
+then execute installUtility install webCacheMonitor-1.0
+
+Cache monitor link
+http://localhost:3737/cachemonitor
+http://localhost:8080/cachemonitor
+
+Product listing page
+Product detail page
+Search listing page
+
+https://help.hcltechsw.com/commerce/9.1.0/tutorials/tutorial/tsd_search2_intro.html
+
+ManagementCenter link (Port not working this is alternate)
+https://localhost:8000/lobtools/cmc/ManagementCenter
+
+To query new JSP page
+https://localhost:8443/wcs/shop/<New viewname>?catalogId=10502&langId=-1&storeId=1
+
+
+DATALOADING
+
+xml structure for business object config file wc-loader-....xml
+DataloadBusinessObjectConfiguration
+	- Dataloader
+		- DataReader
+			- Data
+				-Column
+				-Column
+				-Column
+
+		- BusinessObjectBuilder
+			- DataMapping
+				-mapping
+				-mapping
+				-mapping
+			- BusinessObjectMediator
+
+
+
+
+
