@@ -97,5 +97,6 @@ DataloadBusinessObjectConfiguration
 
 
 
+AccessControlUnitTest="true" in wc-search.xml so we dont have to configure ACP
 
 
